@@ -3,7 +3,7 @@
  */
 
 import { twelveHrTime } from '@/types';
-import { Track } from './services/spotify.service';
+//import { Track } from './services/spotify.service';
 
 export interface AlarmInterface extends twelveHrTime {
   active: boolean;
@@ -19,7 +19,7 @@ export interface SettingsInterface {
   connectedMusicAccounts: Array<string>;
   deviceSaved: string;
   trackkIndexSaved: number;
-  track: Track;
+ // track: Track;
 }
 
 export interface MusicAccount {

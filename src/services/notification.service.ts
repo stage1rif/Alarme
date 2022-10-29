@@ -1,5 +1,5 @@
 import Constants from 'expo-constants';
-import * as Permissions from 'expo-permissions';
+//import * as Permissions from 'expo-permissions';
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import { AlarmInterface } from '@/interfaces';
@@ -9,10 +9,10 @@ import { NotificationContentInput, NotificationTriggerInput } from 'expo-notific
 export async function registerForPushNotificationsAsync() {
   let token;
   if (Constants.isDevice) {
-    const { status: existingStatus } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
+    const { status: existingStatus } = await Notifications.getPermissionsAsync();
     let finalStatus = existingStatus;
     if (existingStatus !== 'granted') {
-      const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+      const { status } = await  Notifications.requestPermissionsAsync() ;
       finalStatus = status;
     }
     if (finalStatus !== 'granted') {

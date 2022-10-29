@@ -6,7 +6,7 @@ import { Nunito_400Regular, Nunito_600SemiBold, useFonts as useFontsNunito } fro
 import { Roboto_400Regular, Roboto_500Medium, useFonts as useFontsRoboto } from '@expo-google-fonts/roboto';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState , Component, PropsWithChildren } from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import useLoadCredentials from '@/hooks/useLoadCredentials';
@@ -15,6 +15,7 @@ import { registerForPushNotificationsAsync } from '@/services/notification.servi
 import { getAvailableDevice, playTrackAsync } from '@/services/spotify.service';
 import * as Notifications from 'expo-notifications';
 import useStore from '@/store/settings';
+
 const queryClient = new QueryClient();
 
 Notifications.setNotificationHandler({
