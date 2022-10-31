@@ -149,12 +149,6 @@ export default function SettingsTabScreen({
               </VivText>
             }
           >
-            <SettingCardItem
-              title="Connect music"
-              horizontalRule
-              onCardItemPress={onLinkedAccountsPress}
-              icon={<SimpleLineIcons name="music-tone-alt" size={24} color={Colors.greyLight2} />}
-            />
 
             <SettingCardItem
               title="Privacy policy"

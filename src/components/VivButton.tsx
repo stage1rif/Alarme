@@ -92,35 +92,7 @@ export default function VivButton(props: ButtonProps) {
     >
       {({ pressed }) => (
         <>
-          <View style={[styles.iconSeparatedView, { paddingVertical: props.paddingVertical || 13.5 }]}>
-            {props.color === 'Spotify' ? (
-              <Image
-                style={{
-                  height: resize<number>(24, 20, 44),
-                  width: resize<number>(24, 20, 44)
-                }}
-                source={require('~/assets/images/spotify.png')}
-              />
-            ) : (
-              props.icon
-            )}
-          </View>
-          <VivText
-            fontName={resize<FontName>('Headline', 'Headline', 'Title3')}
-            color={pressed ? Colors.black : Colors.blueDark}
-            style={[
-              styles.textSeparated,
-              {
-                paddingVertical: props.paddingVertical || 13.5,
-                paddingLeft:
-                  props.paddingHorizontal && props.paddingHorizontal.left ? props.paddingHorizontal.left : 12.5,
-                paddingRight:
-                  props.paddingHorizontal && props.paddingHorizontal.right ? props.paddingHorizontal.right : 12.5
-              }
-            ]}
-          >
-            {props.text}
-          </VivText>
+
         </>
       )}
     </Pressable>
