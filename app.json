@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "vivifiiy-alarm-app",
-    "slug": "vivifiiy-alarm-app",
+    "name": "doux-reveil-app",
+    "slug": "doux-reveil-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
